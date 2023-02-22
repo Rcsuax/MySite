@@ -1,51 +1,44 @@
 <!doctype html>
 <html>
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script src="https://cdn.tailwindcss.com"></script>
-      <style>
-        #landing-banner {
-          background: rgb(2,0,36);
-          background: linear-gradient(315deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 9%, rgba(0,212,255,1) 100%);
-          background-repeat: no-repeat;
-        }
-      </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <style>
+      #landing-banner {
+        background: rgb(2, 0, 36);
+        background: linear-gradient(315deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 9%, rgba(0,212,255,1) 100%);
+        background-repeat: no-repeat;
+      }
+    </style>
   </head>
 
   <body>
     <nav class="top-0 sticky">
-      <div class="flex flex-row gap-10 p-10 shadow-md bg-white text-[20px] md:text-[30px]">
-        <a href="/" class="pb-2 border-b-2 md:border-b-4 border-blue-500">Home</a>
-        <!-- <a href="/blog">Blog</a> -->
+      <div class="flex flex-row gap-3 md:gap-8 shadow-lg bg-white  md:text-[30px] py-[20px] pl-10">
+        <a href="/" class="text-[15px] md:text-[25px] pb-2 border-b-2 md:border-b-4 border-blue-500 hover:border-cyan-400 hover:text-cyan-400 transition-all">Home</a>
+        <a href="/blog" class="text-[15px] md:text-[25px]  pb-2 hover:border-b-2 md:hover:border-b-4 border-blue-500 hover:border-cyan-400 hover:text-cyan-400 transition-all">Blog</a>
+        <a href="/projects" class="text-[15px] md:text-[25px]  pb-2 hover:border-b-2 md:hover:border-b-4 border-blue-500 hover:border-cyan-400 hover:text-cyan-400 transition-all">Projects</a>
       </div>
     </nav>
 
-    <main>
-      <div id="landing-banner" class="grid md:grid-cols-3 px-10 items-center min-h-[400px]">
-        <h1 class="col-span-2 text-[65px] leading-[65px] md:text-[90px] md:leading-[90px]">Hello, welcome to my <span>world</span> </h1>
-        
-        <div class="flex flex-col text-white text-[20px]">
-          <ul class="list-none">
-            <li class="md:pt-10 hover:text-red"><span class="font-extrabold">></span> Full Stack</li>
-            <li class="md:pt-10"><span class="font-extrabold">></span> UX/UI</li>
-            <li class="md:pt-10"><span class="font-extrabold">></span> Software Craftsman</li>
-          </ul>
-        </div>
-      </div>
+    <main class="h-[2000px]">
+      <section id="landing-banner" class="grid md:grid-cols-3 px-10 items-center h-screen">
+        <h1 class="col-span-2 text-[65px] leading-[65px] md:text-[90px] md:leading-[90px] text-white">Hey,<br/>
+          Welcome to
+          <br/>my
+          <span class="text-black hover:text-cyan-400 transition-all">world</span>
+        </h1>
 
-      <div class="flex flex-col md:flex-row px-10 justify-between gap-10 mt-10">
-        <div class="shadow-md rounded-sm bg-slate-400 w-full h-[200px] text-center">
-          Typescript/React
-        </div>
-        <div class="shadow-md rounded-sm bg-slate-400 w-full h-[200px] text-center">
-          Python
-        </div>
-        <div class="shadow-md rounded-sm bg-slate-400 w-full h-[200px] text-center">
-          System Admin / Devops
-        </div>
-      </div>
+        <div class="hidden flex flex-col text-white text-[20px] gap-10"></div>
+      </section>
+
+      <section class="flex flex-col md:flex-row px-10 justify-between gap-10 mt-10">
+        <div class="box shadow-md rounded-md bg-slate-100 w-full h-[200px] text-center"></div>
+        <div class="shadow-md rounded-md bg-slate-100 w-full h-[200px] text-center"></div>
+        <div class="shadow-md rounded-md bg-slate-100 w-full h-[200px] text-center"></div>
+      </section>
     </main>
-
   </body>
 </html>
